@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About - Yonatan N. Degefu">
+  <div class="about-container">
+    <h1>About Me</h1>
+
+    <section class="bio-section">
+      <div class="profile-image">
+        <!-- Add your photo here -->
+        <div class="placeholder-image">YND</div>
+      </div>
+      <div class="bio-content">
+        <p>
+          I am a PhD candidate in Biomedical Engineering at the University of Virginia, working in the
+          Fallahi-Sichani Lab. My research focuses on understanding cellular plasticity in melanoma through
+          computational and systems biology approaches.
+        </p>
+        <p>
+          I'm passionate about bridging the gap between healthcare and translational research through quantitative
+          methods. My work combines mechanistic modeling, single-cell analysis, and drug combination discovery to
+          develop more effective cancer therapies.
+        </p>
+        <p>
+          Beyond research, I'm bilingual (English and Amharic), an avid soccer player and cyclist, and committed
+          to community service and scientific outreach. I believe in making science accessible and impactful for
+          broader communities.
+        </p>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Ph.D. in Biomedical Engineering</h3>
+            <p class="institution">University of Virginia, Charlottesville, VA</p>
+            <p class="date">August 2021 - Present</p>
+            <p class="description">Research: Mechanistic modeling of AP-1 transcriptional dynamics and cellular plasticity in melanoma</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>B.S. in Biology</h3>
+            <p class="institution">Colby-Sawyer College, New London, NH</p>
+            <p class="date">September 2014 - May 2018</p>
+            <p class="description">Minors: Mathematics & Chemistry | Summa Cum Laude</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <h2>Experience</h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3>Graduate Research Assistant</h3>
+          <p class="organization">Fallahi-Sichani Lab, University of Virginia</p>
+          <p class="date">November 2021 - Present</p>
+          <ul>
+            <li>Developed ODE-based mechanistic modeling framework to characterize AP-1 transcriptional factor dynamics</li>
+            <li>Built computational pipelines for calibrating models from single-cell multiplexed imaging data</li>
+            <li>Integrated Boolean modeling and partial correlation networks to construct de novo regulatory networks</li>
+            <li>Mentored summer undergraduate researchers in quantitative biology and data science</li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3>Systems Medicine Intern</h3>
+          <p class="organization">AstraZeneca, Gaithersburg, MD</p>
+          <p class="date">May 2025 - August 2025</p>
+          <ul>
+            <li>Designed novel QSP model in MATLAB SimBiology for DNA Damage Response pathways</li>
+            <li>Conducted in silico experiments to quantify drug synergy and inform optimal dosing strategies</li>
+            <li>Presented findings to stakeholders in Systems Medicine and Clinical Pharmacology</li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3>Research Technician</h3>
+          <p class="organization">Aldridge Lab, Tufts University</p>
+          <p class="date">June 2018 - May 2021</p>
+          <ul>
+            <li>Investigated multi-drug combinations against M. tuberculosis using DiaMOND method</li>
+            <li>Engineered automated analysis pipeline processing 300,000+ drug combination screens</li>
+            <li>Developed predictive models using machine learning to translate in vitro to in vivo outcomes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00ff41;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+  }
+
+  h1::before {
+    content: '# ';
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+    color: #00ff41;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00ff41;
+  }
+
+  h2::before {
+    content: '## ';
+  }
+
+  .bio-section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .placeholder-image {
+    width: 200px;
+    height: 200px;
+    background-color: #0d0d0d;
+    border-radius: 4px;
+    border: 2px solid #00ff41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ff41;
+    font-weight: 500;
+  }
+
+  .bio-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #c0c0c0;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #00ff41;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background-color: #00ff41;
+    border-radius: 50%;
+    border: 3px solid #1a1a1a;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+  }
+
+  .timeline-content h3 {
+    font-size: 1.25rem;
+    color: #e0e0e0;
+    margin-bottom: 0.25rem;
+  }
+
+  .institution,
+  .organization {
+    color: #a0a0a0;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .date {
+    color: #00ff41;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    color: #c0c0c0;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .experience-item h3 {
+    font-size: 1.25rem;
+    color: #e0e0e0;
+    margin-bottom: 0.25rem;
+  }
+
+  .experience-item ul {
+    margin-top: 0.75rem;
+    margin-left: 1.5rem;
+  }
+
+  .experience-item li {
+    margin-bottom: 0.5rem;
+    color: #c0c0c0;
+    line-height: 1.6;
+  }
+
+  .experience-item li::marker {
+    color: #00ff41;
+  }
+
+  @media (max-width: 768px) {
+    .bio-section {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .placeholder-image {
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

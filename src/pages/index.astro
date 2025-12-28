@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home - Yonatan N. Degefu">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Yonatan N. Degefu</h1>
+      <p class="subtitle">PhD Candidate | Biomedical Engineering | University of Virginia</p>
+      <p class="bio">
+        A passionate advocate of science who hopes to inspire and make an impact on the community through
+        biomedical research. Strong interest in bridging the gap between healthcare and translational research
+        through systems and quantitative approaches to cancer biology.
+      </p>
+      <div class="links">
+        <a href="mailto:njr7jk@virginia.edu" class="btn">Email</a>
+        <a href="https://scholar.google.com/citations?user=POp9Bk4AAAAJ&hl=en" class="btn btn-secondary" target="_blank">Google Scholar</a>
+        <a href="https://github.com/YonaNeg" class="btn btn-secondary" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/yonatan-degefu-b16955a9/" class="btn btn-secondary" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="research-interests">
+    <h2>Research Interests</h2>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <h3>Computational Cancer Biology</h3>
+        <p>Mathematical and mechanistic modeling of cellular plasticity in melanoma, using ODE-based frameworks to understand transcription factor dynamics</p>
+      </div>
+      <div class="interest-card">
+        <h3>Quantitative Systems Pharmacology</h3>
+        <p>Developing QSP models to predict drug synergies and optimize combination therapies for cancer and infectious diseases</p>
+      </div>
+      <div class="interest-card">
+        <h3>Single-Cell Analysis</h3>
+        <p>Integrating multiplexed imaging and computational approaches to reveal regulatory networks and cell state transitions</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights">
+    <h2>Recent Highlights</h2>
+    <div class="highlight-list">
+      <div class="highlight-item">
+        <span class="date">2025</span>
+        <div>
+          <h3>Walter H. Coulter Translational Research Fellowship</h3>
+          <p>Awarded prestigious fellowship to support translational research in biomedical engineering</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="date">2025</span>
+        <div>
+          <h3>New Preprint on Cell State Plasticity in Melanoma</h3>
+          <p>Published preprint on competitive and configurable interactions within the AP-1 network driving melanoma plasticity</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="date">2025</span>
+        <div>
+          <h3>AstraZeneca Systems Medicine Internship</h3>
+          <p>Developed novel QSP models for DNA damage response pathways to predict drug combination synergies</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="date">2023</span>
+        <div>
+          <h3>T32 Systems & Biomolecular Data Science Fellowship</h3>
+          <p>Selected for UVA training program fellowship in quantitative biology and data science</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #00ff41;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+  }
+
+  .hero h1::before {
+    content: '~/';
+    color: #00cc33;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: #a0a0a0;
+    margin-bottom: 1.5rem;
+  }
+
+  .bio {
+    font-size: 1.1rem;
+    color: #c0c0c0;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #00ff41;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 2px solid #00ff41;
+    transition: all 0.2s;
+  }
+
+  .btn:hover {
+    background-color: #00ff41;
+    color: #0d0d0d;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: #a0a0a0;
+    border: 2px solid #404040;
+  }
+
+  .btn-secondary:hover {
+    background-color: #404040;
+    color: #e0e0e0;
+    border-color: #606060;
+  }
+
+  .research-interests {
+    margin-top: 4rem;
+  }
+
+  .research-interests h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00ff41;
+  }
+
+  .research-interests h2::before {
+    content: '# ';
+  }
+
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .interest-card {
+    padding: 2rem;
+    background-color: #0d0d0d;
+    border-radius: 4px;
+    border: 1px solid #00ff41;
+    transition: all 0.3s;
+  }
+
+  .interest-card:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    border-color: #00cc33;
+  }
+
+  .interest-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #00ff41;
+  }
+
+  .interest-card h3::before {
+    content: '>> ';
+    color: #00cc33;
+  }
+
+  .interest-card p {
+    color: #a0a0a0;
+    line-height: 1.6;
+  }
+
+  .highlights {
+    margin-top: 4rem;
+  }
+
+  .highlights h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00ff41;
+  }
+
+  .highlights h2::before {
+    content: '# ';
+  }
+
+  .highlight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .highlight-item {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: #0d0d0d;
+    border-left: 4px solid #00ff41;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 255, 65, 0.1);
+    transition: all 0.3s;
+  }
+
+  .highlight-item:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    transform: translateX(5px);
+  }
+
+  .date {
+    font-weight: 700;
+    color: #00ff41;
+    min-width: 60px;
+  }
+
+  .date::before {
+    content: '[';
+    color: #00cc33;
+  }
+
+  .date::after {
+    content: ']';
+    color: #00cc33;
+  }
+
+  .highlight-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+  }
+
+  .highlight-item p {
+    color: #a0a0a0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .highlight-item {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

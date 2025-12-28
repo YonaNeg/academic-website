@@ -1,0 +1,286 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Research - Yonatan N. Degefu">
+  <div class="research-container">
+    <h1>Research</h1>
+
+    <section class="research-overview">
+      <p class="intro">
+        My research combines computational modeling, systems biology, and quantitative pharmacology to understand
+        and combat cancer and infectious diseases. I develop mechanistic models that bridge molecular mechanisms
+        with therapeutic outcomes, enabling more rational drug combination design and revealing fundamental
+        principles of cellular plasticity.
+      </p>
+    </section>
+
+    <section class="research-areas">
+      <h2>Research Areas</h2>
+
+      <div class="area">
+        <h3>Melanoma Cellular Plasticity</h3>
+        <p>
+          Developing ODE-based mechanistic models to understand how AP-1 transcription factor networks regulate
+          cell state transitions in melanoma. Using single-cell multiplexed imaging data, I build computational
+          frameworks that reveal competitive and configurable interactions driving tumor heterogeneity and drug
+          resistance.
+        </p>
+        <div class="keywords">
+          <span class="keyword">Mechanistic Modeling</span>
+          <span class="keyword">Transcription Factors</span>
+          <span class="keyword">Cell Plasticity</span>
+          <span class="keyword">Single-Cell Analysis</span>
+        </div>
+      </div>
+
+      <div class="area">
+        <h3>Quantitative Systems Pharmacology</h3>
+        <p>
+          Designing QSP models to mechanistically describe drug interactions and predict optimal combination
+          therapies. My work at AstraZeneca focused on DNA damage response pathways, while previous work
+          addressed tuberculosis drug combinations using high-throughput screening and machine learning.
+        </p>
+        <div class="keywords">
+          <span class="keyword">QSP Modeling</span>
+          <span class="keyword">Drug Synergy</span>
+          <span class="keyword">MATLAB SimBiology</span>
+          <span class="keyword">In Silico Experiments</span>
+        </div>
+      </div>
+
+      <div class="area">
+        <h3>Drug Combination Discovery</h3>
+        <p>
+          Developing computational pipelines to systematically measure and predict drug interactions at scale.
+          Applied methods like DiaMOND (Diagonal Measurement Of N-way Drug interactions) to identify synergistic
+          combinations against M. tuberculosis and M. abscessus, processing hundreds of thousands of drug screens.
+        </p>
+        <div class="keywords">
+          <span class="keyword">High-Throughput Screening</span>
+          <span class="keyword">Machine Learning</span>
+          <span class="keyword">Network Analysis</span>
+          <span class="keyword">Predictive Modeling</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Current & Recent Projects</h2>
+
+      <div class="project-card">
+        <h3>AP-1 Network Dynamics in Melanoma</h3>
+        <p class="project-status">Ongoing | 2021 - Present</p>
+        <p>
+          Mechanistic modeling of AP-1 transcription factor dynamics to understand cellular plasticity
+          in melanoma. Integrating Boolean modeling, partial correlation networks, and ODE frameworks
+          with multiplexed single-cell imaging data.
+        </p>
+        <div class="project-links">
+          <a href="https://doi.org/10.1101/2025.11.06.686987" class="link">Preprint</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>QSP Models for DNA Damage Response</h3>
+        <p class="project-status">Completed | Summer 2025</p>
+        <p>
+          Developed novel Quantitative Systems Pharmacology models in MATLAB SimBiology to predict
+          synergistic drug combinations targeting DNA damage response pathways. Conducted in silico
+          experiments to inform optimal dosing strategies for drug-sensitive and resistant phenotypes.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>TB Drug Combination Landscapes</h3>
+        <p class="project-status">Completed | 2018 - 2021</p>
+        <p>
+          Systematic measurement of drug combination landscapes using DiaMOND to predict in vivo tuberculosis
+          treatment outcomes. Developed automated pipelines processing 300,000+ screens and machine learning
+          models to prioritize combinations for animal testing.
+        </p>
+        <div class="project-links">
+          <a href="https://doi.org/10.1016/j.xcrm.2022.100737" class="link">Publication</a>
+          <a href="https://doi.org/10.1016/j.cels.2021.08.004" class="link">Cell Systems Paper</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>M. abscessus Drug Interactions</h3>
+        <p class="project-status">Completed | 2020 - 2023</p>
+        <p>
+          Mapped the drug interaction landscape of Mycobacterium abscessus, identifying novel synergies
+          and isolate-specific responses. Demonstrated how systematic drug interaction measurements can
+          reveal pathogen-specific vulnerabilities.
+        </p>
+        <div class="project-links">
+          <a href="https://doi.org/10.1128/aac.00090-23" class="link">Publication</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .research-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00ff41;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+  }
+
+  h1::before {
+    content: '# ';
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+    color: #00ff41;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00ff41;
+  }
+
+  h2::before {
+    content: '## ';
+  }
+
+  .intro {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #c0c0c0;
+    margin-bottom: 2rem;
+  }
+
+  .area {
+    background-color: #0d0d0d;
+    padding: 2rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #00ff41;
+    border: 1px solid #00ff41;
+    transition: all 0.3s;
+  }
+
+  .area:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+  }
+
+  .area h3 {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+  }
+
+  .area h3::before {
+    content: '>>> ';
+    color: #00ff41;
+  }
+
+  .area p {
+    color: #c0c0c0;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .keyword {
+    background-color: transparent;
+    color: #00ff41;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #00ff41;
+  }
+
+  .project-card {
+    background-color: #0d0d0d;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 255, 65, 0.1);
+    transition: all 0.3s;
+  }
+
+  .project-card:hover {
+    border-color: #00ff41;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-status {
+    color: #00ff41;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .project-status::before {
+    content: '[';
+  }
+
+  .project-status::after {
+    content: ']';
+  }
+
+  .project-card p {
+    color: #c0c0c0;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .link {
+    color: #00ff41;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid #00ff41;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+
+  .link:hover {
+    background-color: #00ff41;
+    color: #0d0d0d;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .area,
+    .project-card {
+      padding: 1.5rem;
+    }
+  }
+</style>
